@@ -1,0 +1,105 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(45deg, #ff4ec7, #4d3145);
+    color: white;
+    text-align: center;
+    overflow: hidden;
+}
+
+.container {
+    padding: 30px;
+}
+
+h1 {
+    font-size: 50px;
+    animation: glow 2s infinite alternate;
+}
+
+.p {
+    font-size: 32px;
+}
+
+
+/* Proposal buttons */
+.proposal {
+    margin-top: -15px;
+}
+
+button {
+    padding: 12px 25px;
+    font-size: 18px;
+    margin: 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    position: relative;
+}
+
+#yesBtn {
+    background: #00c853;
+    color: white;
+}
+
+#noBtn {
+    background: #ff1744;
+    color: white;
+    position: absolute;
+    left: 55%;
+    top: 3470px;
+}
+
+/* Floating hearts */
+.heart {
+    position: fixed;
+    bottom: -10px;
+    font-size: 24px;
+    animation: floatUp linear infinite;
+}
+
+@keyframes floatUp {
+    to {
+        transform: translateY(-100vh);
+        opacity: 0;
+    }
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 10px white; }
+    to { text-shadow: 0 0 25px red; }
+}
+
+/* 🌟 Full screen scroll sections */
+
+html {
+    scroll-behavior: smooth;
+}
+
+.section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.story-img {
+    width: 350px;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+/* Snap scrolling */
+
+body {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+}
+
+.section {
+    scroll-snap-align: start;
+}
+
